@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/aztecrex/alexa-trello/issues"
   },
-  "homepage": "https://github.com/aztecrex/alexa-trello#readme"
+  "homepage": "https://github.com/aztecrex/alexa-trello#readme",
+  "dependencies": {
+    "node-trello": "^1.1.2"
+  }
 }
