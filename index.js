@@ -75,11 +75,10 @@ function addCard(intent, session, callback) {
   const alexaCardTitle = intent.name;
 
   const trelloCardTitleSlot = intent.slots.Title;
+  let speechOutput = "I didn't catch the title of the card.";
   if (trelloCardTitleSlot) {
     const trelloCardTitle = trelloCardTitleSlot.value;
-    const speechOutput = 'I have added ' + trelloCardTitle + ' to your list.';
-  } else {
-    const speechOutput = "I didn't catch the title of the card."
+    speechOutput = 'I have added ' + trelloCardTitle + ' to your list.';
   }
   const repromptText = 'You can add a card by saying something like, "add Spruce."';
 
