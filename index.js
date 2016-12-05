@@ -74,8 +74,8 @@ function addCard(intent, session, callback) {
   const sessionAttributes = {};
   const alexaCardTitle = intent.name;
 
-  const trelloCardTitle = intent.slots.Title;
-  const speechOutput = 'I have added ' + trelloCardTitle + ' to your list.';
+  const trelloCardTitle = intent.slots.Title.value;
+  const speechOutput = 'I have added ${trelloCardTitle} to your list.';
 
   const repromptText = 'This is the reprompt text for addCard.';
 
