@@ -114,7 +114,7 @@ function getColorFromSession(intent, session, callback) {
     }
 
     if (favoriteColor) {
-        speechOutput = `Your favorite color is ${favoriteColor}. Goodbye.`;
+        speechOutput = `Your favorite color is ${favoriteColor}. Later.`;
         shouldEndSession = true;
     } else {
         speechOutput = "I'm not sure what your favorite color is, you can say, my favorite color " +
