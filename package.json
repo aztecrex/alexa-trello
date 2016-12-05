@@ -1,0 +1,22 @@
+{
+  "name": "alexa-trello",
+  "version": "1.0.0",
+  "description": "Alexa Trello!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aztecrex/alexa-trello.git"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Calvin and Greg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aztecrex/alexa-trello/issues"
+  },
+  "homepage": "https://github.com/aztecrex/alexa-trello#readme"
+}
