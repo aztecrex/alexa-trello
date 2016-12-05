@@ -69,6 +69,18 @@ function handleSessionEndRequest(callback) {
 }
 
 
+function catchAll(intent, session, callback) {
+
+  const sessionAttributes = {};
+  const alexaCardTitle = "Catch All!";
+  const speechOutput = "I caught an unrecognized utterance, " + intent.Phrase.value;
+  const repromptText = 'You can add a card by saying something like, "add purple"';
+  const shouldEndSession = false;
+
+  callback(sessionAttributes,
+    buildSpeechletResponse(alexaCardTitle, speechOutput, repromptText, shouldEndSession));
+}
+
 function addCard(intent, session, callback) {
 
   const sessionAttributes = {};
@@ -120,6 +132,8 @@ function onIntent(intentRequest, session, callback) {
     // Dispatch to your skill's intent handlers
     if (intentName === 'AddCardIntent') {
         addCard(intent, session, callback);
+    } else if (intentName === 'CatchAllIntent') {
+        catchAll(intent, session, callback);
     } else if (intentName === 'AMAZON.HelpIntent') {
         getWelcomeResponse(callback);
     } else if (intentName === 'AMAZON.StopIntent' || intentName === 'AMAZON.CancelIntent') {
