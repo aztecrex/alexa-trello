@@ -7,6 +7,7 @@
  *
  * For additional samples, visit the Alexa Skills Kit Getting Started guide at
  * http://amzn.to/1LGWsLG
+ *
  */
 
 
